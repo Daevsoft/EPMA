@@ -1,0 +1,116 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+a:hover{
+    text-decoration: none;
+}
+.value-text{
+    margin-left: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgb(188, 188, 188);
+    background-color: aliceblue;
+    cursor: text;
+}
+.value-text:hover{
+    background-color: rgba(188, 188, 188, 0.4);
+}
+.btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.small-bold{
+    font-weight: bold;
+    padding-top: 5px;
+}
+.text-small, .small-bold{
+    font-size: small;
+}
+.badge-blue{
+    background-color: cornflowerblue;
+}
+.badge-blue{
+    background-color: palevioletred;
+}
+.control{
+    margin-left: 5px;
+}
+.form-control{
+    margin: 5px;
+}
+.btn-gray{
+    opacity: 50%;
+    background-color: gray;
+    color: white;
+}
+.title-bar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.table-custome thead tr th, .table-custome tbody tr td{
+    font-size: 0.8em;
+    padding: 5px;
+}
+.table-custome thead tr th{
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bolder;
+}
+.table-custome tbody tr td{
+    cursor: pointer;
+}
+.max-100{
+    max-width: 100px;
+}
+.max-50{
+    max-width: 50px;
+}
+.max-30{
+    max-width: 30px;
+}
+.max-10{
+    max-width: 10px;
+}
+.wid-10{
+    width: 10px;
+}
+.wid-100{
+    width: 100px;
+}
+.wid-100p{
+    width: 100%;
+}
+.main-layout{
+    padding-left: 230px;
+}
+.max-20{
+    max-width: 20px;
+}
+.content{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    max-height: 100%;
+    background-color: rgb(0, 53, 0);
+    border: 1px solid gainsboro;
+    overflow: auto;
+}
+.content-head tbody tr td{
+    padding: 5px;
+    vertical-align: baseline;
+}
+.button-success{
+    background-color: rgb(27, 177, 35);
+    color: white;
+    padding: 5px;
+}
+.button-success:hover{
+    color: white;
+    background-color: rgb(23, 126, 28);
+}
+.box{
+    padding: 10px;
+    border-radius: 10px;
+}

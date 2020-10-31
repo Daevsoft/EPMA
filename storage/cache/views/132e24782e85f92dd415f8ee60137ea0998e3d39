@@ -1,0 +1,56 @@
+<form action="<?php echo(site('home/index/true')); ?>" method="POST">
+<table class="content-head">
+    <tr>
+        <td><a href="<?php echo(site('pelayanan')); ?>" class="btn btn-success"><span class="fa fa-plus"></span> TAMBAH PASIEN</a></td>
+        <td><input class="form-control" id="txt-search" name="search" placeholder="cari pasien ..." /></td>
+        <td><button class="btn btn-info" type="submit"><span class="fa fa-search"></span>CARI</button></td>
+    </tr>
+</table>
+</form>
+<div class="content">
+    <table class="table table-bordered table-light table-hover table-striped table-custome">
+        <thead class="thead-dark">
+            <tr>
+                <th class="max-10">No.</th>
+                <th class="wid-10"></th>
+                <th>Nama Pasien</th>
+                <th class="max-100">BPJS</th>
+                <th class="max-10">Usia</th>
+                <th class="max-10">Jam<br>Masuk</th>
+                <th class="max-30">Estimasi<br>Waktu Selesai</th>
+                <th class="max-30">Poli/<br>Ruangan</th>
+                <th>Tindakan</th>
+                <th class="max-100">Dokter</th>
+                <th class="max-100">Perawat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $i = 1 ?>
+            <?php foreach($pelayanan_list as $pelayanan){ ?>
+                <tr class="table-<?php echo(($pelayanan['triase'] == 'merah'? 'danger' : 'warning')); ?>" onclick="preview(<?php echo($pelayanan['id_pelayanan']); ?> )">
+                    <td class="text-center"><?php echo($i); ?></td>
+                    <td>
+                        <?php if($pelayanan['status'] == 0){ ?>
+                            <a href="<?php echo(site('tindakan/edit/'.$pelayanan['id_pelayanan'])); ?>" class="button-success">TINDAK</a>
+                        <?php } ?>
+                    </td>
+                    <td><?php echo($pelayanan['nama_lengkap']); ?></td>
+                    <td><?php echo($pelayanan['no_bpjs']); ?></td>
+                    <td><?php echo($pelayanan['umur']); ?> Thn</td>
+                    <td><?php echo(date('h:i a', strtotime($pelayanan['tanggal_masuk']))); ?></td>
+                    <td><?php echo($pelayanan['estimasi_waktu']); ?></td>
+                    <td><?php echo($pelayanan['poli']); ?></td>
+                    <td><?php echo($pelayanan['tindakan']); ?></td>
+                    <td><?php echo($pelayanan['nama_dokter']); ?></td>
+                    <td><?php echo($pelayanan['nama_perawat']); ?></td>
+                </tr>
+                <?php $i++ ?>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
+<script>
+    function preview(id) {
+        document.location = "<?php echo(site('pelayanan/preview/')); ?>"+id;
+    }
+</script>

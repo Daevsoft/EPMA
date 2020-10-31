@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo(app_name()); ?></title>
+    <?php echo(css_source('bootstrap.min')); ?>
+    <?php echo(css_source('bootstrap-select.min')); ?>
+    <?php echo(css_source('sidebar')); ?>
+    <?php echo(js_source('jquery.min')); ?>
+    <?php echo(css_source('style')); ?>
+
+    <style>
+        .home-home, .pelayanan-pelayanan, .pencarian-pencarian, .laporan-laporan{
+                background-color:rgba(2,2,2,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="app-name"><?php echo(app_name()); ?></div>
+
+        <div class="time" id="time">--:--</div>
+        <div class="name-user"><?php echo($nama_petugas); ?></div>
+
+        <ul class="menu">
+            <a href="<?php echo(site('home')); ?>" class="home-<?php echo($menu); ?>"><li>DASHBOARD</li></a>
+            <a href="<?php echo(site('pelayanan')); ?>" class="pelayanan-<?php echo($menu); ?>"><li>PELAYANAN</li></a>
+            <a href="<?php echo(site('pencarian')); ?>" class="pencarian-<?php echo($menu); ?>"><li>PENCARIAN</li></a>
+            <a href="<?php echo(site('laporan')); ?>" class="laporan-<?php echo($menu); ?>"><li>LAPORAN</li></a>
+            <a href="<?php echo(site('monitor')); ?>" target="_blank"><li>MONITOR</li></a>
+            <a href="<?php echo(site('user/logout')); ?>"><li>LOGOUT</li></a>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 main-layout">
+            <h3 class="title-bar"><b><?php echo($title); ?></b></h3>
